@@ -35,6 +35,7 @@ def proof_of_work(nickname, leading_zeros):
             print(f"Time taken: {end_time - start_time:.6f} seconds")
             print(f"Nonce: {nonce}")
             print(f"Hash: {hash_result}\n")
+            print(f"text: {text}\n")
             break
         nonce += 1
 
