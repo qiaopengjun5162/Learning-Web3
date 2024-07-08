@@ -1,0 +1,3 @@
+[submodule "Bank-code/Bank/lib/forge-std"]
+	path = Bank-code/Bank/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
