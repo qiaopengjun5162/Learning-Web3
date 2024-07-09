@@ -1,0 +1,33 @@
+{
+  "description": "This is the first URL for MyERC721Token, showcasing the unique attributes of the token.",
+  "external_url": "https://testnets.opensea.io/zh-CN/account/collected",
+  "image": "ipfs://QmWSMP1fyV1BnQg8fRQfnkcG1qLjQLP3FPJWHuuSjNUwWy",
+  "name": "xiaoqiao-MyERC721Token",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blue"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Green"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Smile"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "T-shirt"
+    },
+    {
+      "trait_type": "Accessories",
+      "value": "Hat"
+    },
+    {
+      "display_type": "number",
+      "trait_type": "Generation",
+      "value": 1
+    }
+  ]
+}
