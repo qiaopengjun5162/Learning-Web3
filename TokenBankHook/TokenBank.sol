@@ -97,6 +97,7 @@ contract TokenBank is TokenRecipient {
 
      // 实现 tokensReceived 函数
     function tokensReceived(address from, uint256 amount) external override returns (bool) {
+        require(msg.sender == address(token), "Invalid token contract");
         // 记录接收到的代币数量
         balances[from] += amount;
 
