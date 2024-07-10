@@ -240,6 +240,7 @@ cython_debug/
 .idea/
 
 # Compiler files
+*/cache
 */cache/
 */out/
 
