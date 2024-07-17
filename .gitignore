@@ -254,3 +254,5 @@ docs/
 
 # Dotenv file
 .env
+*/node_modules/*
+*/node_modules
