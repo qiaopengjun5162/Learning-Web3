@@ -88,9 +88,9 @@ async function main() {
 
     console.log(`Fetching USDC transfer logs from block ${fromBlock} to ${toBlock}...`);
 
-    // const logs = await getTransferLogs(fromBlock, toBlock);
-    const filter = await getEventFilter(fromBlock, toBlock);
-    const logs = await publicClient.getFilterLogs({ filter })
+    const logs = await getTransferLogs(fromBlock, toBlock);
+    // const filter = await getEventFilter(fromBlock, toBlock);
+    // const logs = await publicClient.getFilterLogs({ filter })
 
 
     console.log(`最新区块号：${latestBlockNumber}`);
@@ -100,6 +100,8 @@ async function main() {
     console.log(`交易数量：${transactionCount}`);
 
     console.log(`找到 ${logs.length} 条转账记录`);
+
+    console.log("___", logs[0]);
 
 
 
