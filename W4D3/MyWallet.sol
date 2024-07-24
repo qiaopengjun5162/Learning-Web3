@@ -6,6 +6,7 @@ contract MyWallet {
     mapping(address => bool) private approved;
     address public owner;
 
+    // https://github.com/Vectorized/solady/blob/main/src/auth/Ownable.sol#L124
     bytes32 internal constant _OWNER_SLOT =
         0xffffffffffffffffffffffffffffffffffffffffffffffffffffffff74873927;
 
