@@ -10,3 +10,6 @@
 [submodule "W4D3/esRNT/lib/forge-std"]
 	path = W4D3/esRNT/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "InsertionSort/lib/forge-std"]
+	path = InsertionSort/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
