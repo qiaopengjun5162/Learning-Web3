@@ -13,3 +13,15 @@
 [submodule "InsertionSort/lib/forge-std"]
 	path = InsertionSort/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "GamblingGame/lib/forge-std"]
+	path = GamblingGame/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "GamblingGame/lib/openzeppelin-contracts"]
+	path = GamblingGame/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "GamblingGame/lib/openzeppelin-foundry-upgrades"]
+	path = GamblingGame/lib/openzeppelin-foundry-upgrades
+	url = https://github.com/OpenZeppelin/openzeppelin-foundry-upgrades
+[submodule "GamblingGame/lib/openzeppelin-contracts-upgradeable"]
+	path = GamblingGame/lib/openzeppelin-contracts-upgradeable
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable
