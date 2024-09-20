@@ -25,3 +25,9 @@
 [submodule "GamblingGame/lib/openzeppelin-contracts-upgradeable"]
 	path = GamblingGame/lib/openzeppelin-contracts-upgradeable
 	url = https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable
+[submodule "WETH/lib/forge-std"]
+	path = WETH/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "WETH/lib/openzeppelin-contracts"]
+	path = WETH/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
