@@ -7,9 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
 
 contract WrappedEther is ERC20, ERC20Burnable, Ownable, ERC20Permit {
-    constructor(
-        address initialOwner
-    )
+    constructor(address initialOwner)
         ERC20("Wrapped Ether", "WETH")
         Ownable(initialOwner)
         ERC20Permit("Wrapped Ether")
