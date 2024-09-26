@@ -1,66 +1,42 @@
-## Foundry
+# Ballot
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## 投票合约
 
-Foundry consists of:
+用 Solidity 合约实现委托投票，以便自动和完全透明的投票计数。
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+投票合约
+giveRightToVote
+delegate
+vote
+winningProposal
+winnerName
 
-## Documentation
+这段Solidity代码实现了一个投票合约。以下是代码的详细解释：
 
-https://book.getfoundry.sh/
+1. 定义了两个结构体，`Voter` 和 `Proposal`，分别用于表示投票者和提案。
 
-## Usage
+2. 定义了合约的构造函数，接收一个提案名称数组作为参数。构造函数中，将合约的创建者设为chairperson，并将他的投票权重设为1。然后，将提案数组初始化为一系列带有名称和票数0的提案。
 
-### Build
+3. 定义了一个名为 `giveRightToVote` 的公共函数，用于赋予投票者投票权。该函数要求调用者是chairperson，且被赋予投票权的投票者尚未投票。
 
-```shell
-$ forge build
-```
+4. 定义了一个名为 `delegate` 的公共函数，用于投票者将投票权委托给其他人。该函数要求调用者具有投票权，尚未投票，且不能自我委托。在委托过程中，会检查委托链中是否存在循环。
 
-### Test
+5. 定义了一个名为 `vote` 的公共函数，用于投票者对提案进行投票。该函数要求调用者具有投票权，尚未投票。
 
-```shell
-$ forge test
-```
+6. 定义了一个名为 `winningProposal` 的公共视图函数，用于计算得票最多的提案的索引。
 
-### Format
+7. 定义了一个名为 `winnerName` 的公共函数，用于获取得票最多的提案的名称。
 
-```shell
-$ forge fmt
-```
+注意事项：
 
-### Gas Snapshots
+1. 合约中的所有函数都使用了 `require` 语句来检查条件是否满足，如果不满足则抛出异常。
 
-```shell
-$ forge snapshot
-```
+2. 合约中的变量都使用了 `storage` 关键字，表示它们会被存储在区块链上。
 
-### Anvil
+3. 合约中的函数都使用了 `external` 关键字，表示它们只能被外部调用。
 
-```shell
-$ anvil
-```
+4. 合约中的函数都使用了 `public` 关键字，表示它们可以被任何人调用。
 
-### Deploy
+## 参考
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+- <https://www.devoven.com/encoding/string-to-bytes32>

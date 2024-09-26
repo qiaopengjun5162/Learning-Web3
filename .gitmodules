@@ -31,3 +31,6 @@
 [submodule "WETH/lib/openzeppelin-contracts"]
 	path = WETH/lib/openzeppelin-contracts
 	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "Ballot/lib/forge-std"]
+	path = Ballot/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
