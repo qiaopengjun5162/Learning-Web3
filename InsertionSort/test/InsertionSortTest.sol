@@ -12,13 +12,13 @@ contract InsertionSortTest is Test {
     }
 
     function testInsertionSortBasic() public view {
-        uint256[] memory array;
+        uint256[] memory array = new uint256[](4);
         array[0] = 4;
         array[1] = 3;
         array[2] = 2;
         array[3] = 1;
 
-        uint256[] memory sortedArray = sorter.insertionSort(array);
+        uint256[] memory sortedArray = sorter.insertionSort2(array);
 
         // 检查排序结果是否正确
         assertEq(sortedArray[0], 1);
@@ -28,7 +28,7 @@ contract InsertionSortTest is Test {
     }
 
     function testInsertionSortAlreadySorted() public view {
-        uint256[] memory array;
+        uint256[] memory array = new uint256[](4);
         array[0] = 1;
         array[1] = 2;
         array[2] = 3;
@@ -44,14 +44,15 @@ contract InsertionSortTest is Test {
     }
 
     function testInsertionSortWithDuplicates() public view {
-        uint256[] memory array;
+        uint256[] memory array = new uint256[](5);
         array[0] = 3;
         array[1] = 1;
         array[2] = 2;
         array[3] = 3;
         array[4] = 1;
 
-        uint256[] memory sortedArray = sorter.insertionSort(array);
+        // uint256[] memory sortedArray = sorter.insertionSort(array);
+        uint256[] memory sortedArray = sorter.insertionSort2(array);
 
         // 检查排序结果
         assertEq(sortedArray[0], 1);

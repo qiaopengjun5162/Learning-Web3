@@ -19,6 +19,21 @@ contract InsertionSort {
         }
         return array;
     }
+
+    // 插入排序 正确版
+    function insertionSort2(uint256[] memory a) public pure returns (uint256[] memory) {
+        // note that uint can not take negative value
+        for (uint256 i = 1; i < a.length; i++) {
+            uint256 temp = a[i];
+            uint256 j = i;
+            while ((j >= 1) && (temp < a[j - 1])) {
+                a[j] = a[j - 1];
+                j--;
+            }
+            a[j] = temp;
+        }
+        return (a);
+    }
 }
 // 1. 从数组的第二个元素开始，将其视为一个待插入的元素。
 // 2. 将待插入的元素与它之前的元素进行比较，如果之前的元素大于待插入的元素，则将之前的元素向后移动一位。
