@@ -34,3 +34,6 @@
 [submodule "Ballot/lib/forge-std"]
 	path = Ballot/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "simple_uniswap/lib/forge-std"]
+	path = simple_uniswap/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
