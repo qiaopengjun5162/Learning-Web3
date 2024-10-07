@@ -55,3 +55,9 @@
 [submodule "WTFApe/lib/forge-std"]
 	path = WTFApe/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "DutchAuction/lib/forge-std"]
+	path = DutchAuction/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "DutchAuction/lib/openzeppelin-contracts"]
+	path = DutchAuction/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
