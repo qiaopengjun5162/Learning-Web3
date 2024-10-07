@@ -40,3 +40,6 @@
 [submodule "simple_uniswap2/lib/forge-std"]
 	path = simple_uniswap2/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "faucet/lib/forge-std"]
+	path = faucet/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
