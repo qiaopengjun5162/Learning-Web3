@@ -52,3 +52,6 @@
 [submodule "Airdrop/lib/openzeppelin-contracts"]
 	path = Airdrop/lib/openzeppelin-contracts
 	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "WTFApe/lib/forge-std"]
+	path = WTFApe/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
