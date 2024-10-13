@@ -260,3 +260,5 @@ docs/
 */lib/
 lib/*
 */lib
+*/artifacts
+*/artifacts/*
