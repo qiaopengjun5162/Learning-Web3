@@ -1,0 +1,288 @@
+{
+	"id": "b2852448a037a0684e4ab61f27c3ca4a",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.26",
+	"solcLongVersion": "0.8.26+commit.8a97fa7a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"src/FunctionsSource.sol": {
+				"content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\n/**\n * THIS IS AN EXAMPLE CONTRACT THAT USES HARDCODED VALUES FOR CLARITY.\n * THIS IS AN EXAMPLE CONTRACT THAT USES UN-AUDITED CODE.\n * DO NOT USE THIS CODE IN PRODUCTION.\n */\nabstract contract FunctionsSource {\n    string public getNftMetadata =\n        \"const { ethers } = await import('npm:ethers@6.10.0');\"\n        \"const Hash = await import('npm:ipfs-only-hash@4.0.0');\"\n        \"const apiResponse = await Functions.makeHttpRequest({\"\n        \"    url: `https://api.bridgedataoutput.com/api/v2/OData/test/Property('P_5dba1fb94aa4055b9f29696f')?access_token=6baca547742c6f96a6ff71b138424f21`,\"\n        \"});\"\n        \"const realEstateAddress = apiResponse.data.UnparsedAddress;\"\n        \"const yearBuilt = Number(apiResponse.data.YearBuilt);\"\n        \"const lotSizeSquareFeet = Number(apiResponse.data.LotSizeSquareFeet);\"\n        \"const livingArea = Number(apiResponse.data.LivingArea);\"\n        \"const bedroomsTotal = Number(apiResponse.data.BedroomsTotal);\"\n        \"const metadata = {\"\n        \"name: `Real Estate Token`,\"\n        \"attributes: [\"\n        \"{ trait_type: `realEstateAddress`, value: realEstateAddress },\"\n        \"{ trait_type: `yearBuilt`, value: yearBuilt },\"\n        \"{ trait_type: `lotSizeSquareFeet`, value: lotSizeSquareFeet },\"\n        \"{ trait_type: `livingArea`, value: livingArea },\"\n        \"{ trait_type: `bedroomsTotal`, value: bedroomsTotal }\"\n        \"]\"\n        \"};\"\n        \"const metadataString = JSON.stringify(metadata);\"\n        \"const ipfsCid = await Hash.of(metadataString);\"\n        \"return Functions.encodeString(`ipfs://${ipfsCid}`);\";\n\n    string public getPrices =\n        \"const { ethers } = await import('npm:ethers@6.10.0');\"\n        \"const abiCoder = ethers.AbiCoder.defaultAbiCoder();\"\n        \"const tokenId = args[0];\"\n        \"const apiResponse = await Functions.makeHttpRequest({\"\n        \"    url: `https://api.bridgedataoutput.com/api/v2/OData/test/Property('P_5dba1fb94aa4055b9f29696f')?access_token=6baca547742c6f96a6ff71b138424f21`,\"\n        \"});\"\n        \"const listPrice = Number(apiResponse.data.ListPrice);\"\n        \"const originalListPrice = Number(apiResponse.data.OriginalListPrice);\"\n        \"const taxAssessedValue = Number(apiResponse.data.TaxAssessedValue);\"\n        \"const encoded = abiCoder.encode([`uint256`, `uint256`, `uint256`, `uint256`], [tokenId, listPrice, originalListPrice, taxAssessedValue]);\"\n        \"return ethers.getBytes(encoded);\";\n}\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": [],
+			"evmVersion": "paris"
+		}
+	},
+	"output": {
+		"contracts": {
+			"src/FunctionsSource.sol": {
+				"FunctionsSource": {
+					"abi": [
+						{
+							"inputs": [],
+							"name": "getNftMetadata",
+							"outputs": [
+								{
+									"internalType": "string",
+									"name": "",
+									"type": "string"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						},
+						{
+							"inputs": [],
+							"name": "getPrices",
+							"outputs": [
+								{
+									"internalType": "string",
+									"name": "",
+									"type": "string"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"getNftMetadata()": "e6b46ff5",
+							"getPrices()": "bd9a548b"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getNftMetadata\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPrices\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"THIS IS AN EXAMPLE CONTRACT THAT USES HARDCODED VALUES FOR CLARITY. THIS IS AN EXAMPLE CONTRACT THAT USES UN-AUDITED CODE. DO NOT USE THIS CODE IN PRODUCTION.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/FunctionsSource.sol\":\"FunctionsSource\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"src/FunctionsSource.sol\":{\"keccak256\":\"0xbf8fe92e8fddc44ad4dc6a8e402d6031cd27d207649621ec55ec832c65544f0c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a001896fb62a7393e972e0ed73fb7ce3382e3d4783bb5530fd84e58f0f57dccf\",\"dweb:/ipfs/QmSdMb62D6qqAFgd1aPanXQkg68YayiU722yCA4EmzzrUP\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [
+							{
+								"astId": 5,
+								"contract": "src/FunctionsSource.sol:FunctionsSource",
+								"label": "getNftMetadata",
+								"offset": 0,
+								"slot": "0",
+								"type": "t_string_storage"
+							},
+							{
+								"astId": 8,
+								"contract": "src/FunctionsSource.sol:FunctionsSource",
+								"label": "getPrices",
+								"offset": 0,
+								"slot": "1",
+								"type": "t_string_storage"
+							}
+						],
+						"types": {
+							"t_string_storage": {
+								"encoding": "bytes",
+								"label": "string",
+								"numberOfBytes": "32"
+							}
+						}
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"notice": "THIS IS AN EXAMPLE CONTRACT THAT USES HARDCODED VALUES FOR CLARITY. THIS IS AN EXAMPLE CONTRACT THAT USES UN-AUDITED CODE. DO NOT USE THIS CODE IN PRODUCTION.",
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"src/FunctionsSource.sol": {
+				"ast": {
+					"absolutePath": "src/FunctionsSource.sol",
+					"exportedSymbols": {
+						"FunctionsSource": [
+							9
+						]
+					},
+					"id": 10,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "32:23:0"
+						},
+						{
+							"abstract": true,
+							"baseContracts": [],
+							"canonicalName": "FunctionsSource",
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"documentation": {
+								"id": 2,
+								"nodeType": "StructuredDocumentation",
+								"src": "57:175:0",
+								"text": " THIS IS AN EXAMPLE CONTRACT THAT USES HARDCODED VALUES FOR CLARITY.\n THIS IS AN EXAMPLE CONTRACT THAT USES UN-AUDITED CODE.\n DO NOT USE THIS CODE IN PRODUCTION."
+							},
+							"fullyImplemented": true,
+							"id": 9,
+							"linearizedBaseContracts": [
+								9
+							],
+							"name": "FunctionsSource",
+							"nameLocation": "251:15:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"constant": false,
+									"functionSelector": "e6b46ff5",
+									"id": 5,
+									"mutability": "mutable",
+									"name": "getNftMetadata",
+									"nameLocation": "287:14:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 9,
+									"src": "273:1366:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_string_storage",
+										"typeString": "string"
+									},
+									"typeName": {
+										"id": 3,
+										"name": "string",
+										"nodeType": "ElementaryTypeName",
+										"src": "273:6:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_string_storage_ptr",
+											"typeString": "string"
+										}
+									},
+									"value": {
+										"hexValue": "636f6e7374207b20657468657273207d203d20617761697420696d706f727428276e706d3a65746865727340362e31302e3027293b636f6e73742048617368203d20617761697420696d706f727428276e706d3a697066732d6f6e6c792d6861736840342e302e3027293b636f6e737420617069526573706f6e7365203d2061776169742046756e6374696f6e732e6d616b654874747052657175657374287b2020202075726c3a206068747470733a2f2f6170692e627269646765646174616f75747075742e636f6d2f6170692f76322f4f446174612f746573742f50726f70657274792827505f35646261316662393461613430353562396632393639366627293f6163636573735f746f6b656e3d3662616361353437373432633666393661366666373162313338343234663231602c7d293b636f6e7374207265616c45737461746541646472657373203d20617069526573706f6e73652e646174612e556e706172736564416464726573733b636f6e737420796561724275696c74203d204e756d62657228617069526573706f6e73652e646174612e596561724275696c74293b636f6e7374206c6f7453697a6553717561726546656574203d204e756d62657228617069526573706f6e73652e646174612e4c6f7453697a6553717561726546656574293b636f6e7374206c6976696e6741726561203d204e756d62657228617069526573706f6e73652e646174612e4c6976696e6741726561293b636f6e737420626564726f6f6d73546f74616c203d204e756d62657228617069526573706f6e73652e646174612e426564726f6f6d73546f74616c293b636f6e7374206d65746164617461203d207b6e616d653a20605265616c2045737461746520546f6b656e602c617474726962757465733a205b7b2074726169745f747970653a20607265616c45737461746541646472657373602c2076616c75653a207265616c45737461746541646472657373207d2c7b2074726169745f747970653a2060796561724275696c74602c2076616c75653a20796561724275696c74207d2c7b2074726169745f747970653a20606c6f7453697a6553717561726546656574602c2076616c75653a206c6f7453697a6553717561726546656574207d2c7b2074726169745f747970653a20606c6976696e6741726561602c2076616c75653a206c6976696e6741726561207d2c7b2074726169745f747970653a2060626564726f6f6d73546f74616c602c2076616c75653a20626564726f6f6d73546f74616c207d5d7d3b636f6e7374206d65746164617461537472696e67203d204a534f4e2e737472696e67696679286d65746164617461293b636f6e73742069706673436964203d20617761697420486173682e6f66286d65746164617461537472696e67293b72657475726e2046756e6374696f6e732e656e636f6465537472696e672860697066733a2f2f247b697066734369647d60293b",
+										"id": 4,
+										"isConstant": false,
+										"isLValue": false,
+										"isPure": true,
+										"kind": "string",
+										"lValueRequested": false,
+										"nodeType": "Literal",
+										"src": "312:1327:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_stringliteral_88c9a116fbbd0d851c488a75c46bae9e21afc7fddb877075d464093835fb5764",
+											"typeString": "literal_string \"const { ethers } = await import('npm:ethers@6.10.0');const Hash = await import('npm:ipfs-only-hash@4.0.0');const apiResponse = await Functions.makeHttpRequest({    url: `https://api.bridgedataoutput.com/api/v2/OData/test/Property('P_5dba1fb94aa4055b9f29696f')?access_token=6baca547742c6f96a6ff71b138424f21`,});const realEstateAddress = apiResponse.data.UnparsedAddress;const yearBuilt = Number(apiResponse.data.YearBuilt);const lotSizeSquareFeet = Number(apiResponse.data.LotSizeSquareFeet);const livingArea = Number(apiResponse.data.LivingArea);const bedroomsTotal = Number(apiResponse.data.BedroomsTotal);const metadata = {name: `Real Estate Token`,attributes: [{ trait_type: `realEstateAddress`, value: realEstateAddress },{ trait_type: `yearBuilt`, value: yearBuilt },{ trait_type: `lotSizeSquareFeet`, value: lotSizeSquareFeet },{ trait_type: `livingArea`, value: livingArea },{ trait_type: `bedroomsTotal`, value: bedroomsTotal }]};const metadataString = JSON.stringify(metadata);const ipfsCid = await Hash.of(metadataString);return Functions.encodeString(`ipfs://${ipfsCid}`);\""
+										},
+										"value": "const { ethers } = await import('npm:ethers@6.10.0');const Hash = await import('npm:ipfs-only-hash@4.0.0');const apiResponse = await Functions.makeHttpRequest({    url: `https://api.bridgedataoutput.com/api/v2/OData/test/Property('P_5dba1fb94aa4055b9f29696f')?access_token=6baca547742c6f96a6ff71b138424f21`,});const realEstateAddress = apiResponse.data.UnparsedAddress;const yearBuilt = Number(apiResponse.data.YearBuilt);const lotSizeSquareFeet = Number(apiResponse.data.LotSizeSquareFeet);const livingArea = Number(apiResponse.data.LivingArea);const bedroomsTotal = Number(apiResponse.data.BedroomsTotal);const metadata = {name: `Real Estate Token`,attributes: [{ trait_type: `realEstateAddress`, value: realEstateAddress },{ trait_type: `yearBuilt`, value: yearBuilt },{ trait_type: `lotSizeSquareFeet`, value: lotSizeSquareFeet },{ trait_type: `livingArea`, value: livingArea },{ trait_type: `bedroomsTotal`, value: bedroomsTotal }]};const metadataString = JSON.stringify(metadata);const ipfsCid = await Hash.of(metadataString);return Functions.encodeString(`ipfs://${ipfsCid}`);"
+									},
+									"visibility": "public"
+								},
+								{
+									"constant": false,
+									"functionSelector": "bd9a548b",
+									"id": 8,
+									"mutability": "mutable",
+									"name": "getPrices",
+									"nameLocation": "1660:9:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 9,
+									"src": "1646:835:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_string_storage",
+										"typeString": "string"
+									},
+									"typeName": {
+										"id": 6,
+										"name": "string",
+										"nodeType": "ElementaryTypeName",
+										"src": "1646:6:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_string_storage_ptr",
+											"typeString": "string"
+										}
+									},
+									"value": {
+										"hexValue": "636f6e7374207b20657468657273207d203d20617761697420696d706f727428276e706d3a65746865727340362e31302e3027293b636f6e737420616269436f646572203d206574686572732e416269436f6465722e64656661756c74416269436f64657228293b636f6e737420746f6b656e4964203d20617267735b305d3b636f6e737420617069526573706f6e7365203d2061776169742046756e6374696f6e732e6d616b654874747052657175657374287b2020202075726c3a206068747470733a2f2f6170692e627269646765646174616f75747075742e636f6d2f6170692f76322f4f446174612f746573742f50726f70657274792827505f35646261316662393461613430353562396632393639366627293f6163636573735f746f6b656e3d3662616361353437373432633666393661366666373162313338343234663231602c7d293b636f6e7374206c6973745072696365203d204e756d62657228617069526573706f6e73652e646174612e4c6973745072696365293b636f6e7374206f726967696e616c4c6973745072696365203d204e756d62657228617069526573706f6e73652e646174612e4f726967696e616c4c6973745072696365293b636f6e737420746178417373657373656456616c7565203d204e756d62657228617069526573706f6e73652e646174612e546178417373657373656456616c7565293b636f6e737420656e636f646564203d20616269436f6465722e656e636f6465285b6075696e74323536602c206075696e74323536602c206075696e74323536602c206075696e74323536605d2c205b746f6b656e49642c206c69737450726963652c206f726967696e616c4c69737450726963652c20746178417373657373656456616c75655d293b72657475726e206574686572732e676574427974657328656e636f646564293b",
+										"id": 7,
+										"isConstant": false,
+										"isLValue": false,
+										"isPure": true,
+										"kind": "string",
+										"lValueRequested": false,
+										"nodeType": "Literal",
+										"src": "1680:801:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_stringliteral_c730d188d12b108fca73d4f18481f0d084e3306184ca2c25cddd009725856c8d",
+											"typeString": "literal_string \"const { ethers } = await import('npm:ethers@6.10.0');const abiCoder = ethers.AbiCoder.defaultAbiCoder();const tokenId = args[0];const apiResponse = await Functions.makeHttpRequest({    url: `https://api.bridgedataoutput.com/api/v2/OData/test/Property('P_5dba1fb94aa4055b9f29696f')?access_token=6baca547742c6f96a6ff71b138424f21`,});const listPrice = Number(apiResponse.data.ListPrice);const originalListPrice = Number(apiResponse.data.OriginalListPrice);const taxAssessedValue = Number(apiResponse.data.TaxAssessedValue);const encoded = abiCoder.encode([`uint256`, `uint256`, `uint256`, `uint256`], [tokenId, listPrice, originalListPrice, taxAssessedValue]);return ethers.getBytes(encoded);\""
+										},
+										"value": "const { ethers } = await import('npm:ethers@6.10.0');const abiCoder = ethers.AbiCoder.defaultAbiCoder();const tokenId = args[0];const apiResponse = await Functions.makeHttpRequest({    url: `https://api.bridgedataoutput.com/api/v2/OData/test/Property('P_5dba1fb94aa4055b9f29696f')?access_token=6baca547742c6f96a6ff71b138424f21`,});const listPrice = Number(apiResponse.data.ListPrice);const originalListPrice = Number(apiResponse.data.OriginalListPrice);const taxAssessedValue = Number(apiResponse.data.TaxAssessedValue);const encoded = abiCoder.encode([`uint256`, `uint256`, `uint256`, `uint256`], [tokenId, listPrice, originalListPrice, taxAssessedValue]);return ethers.getBytes(encoded);"
+									},
+									"visibility": "public"
+								}
+							],
+							"scope": 10,
+							"src": "233:2251:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "32:2453:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
