@@ -262,3 +262,4 @@ lib/*
 */lib
 */artifacts
 */artifacts/*
+*/.deps
