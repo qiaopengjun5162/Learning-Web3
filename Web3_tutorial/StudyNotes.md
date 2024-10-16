@@ -159,4 +159,110 @@ c
 
 OpenSpace-S3-code/Web3_tutorial on  main [?] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base
 ➜
+OpenSpace-S3-code/Web3_tutorial on  main [?] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base 
+➜ pnpm install @chainlink/contracts     
+OpenSpace-S3-code/Web3_tutorial on  main [!?] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base took 11.3s 
+➜ pnpm install --save-dev @chainlink/contracts 
+OpenSpace-S3-code/Web3_tutorial on  main [!?] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base took 2.0s 
+➜ pnpm uninstall @chainlink/contracts       
+
+OpenSpace-S3-code/Web3_tutorial on  main [!?] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base 
+➜ npx hardhat compile 
+Compiled 3 Solidity files successfully (evm target: paris).
+npm notice
+npm notice New minor version of npm available! 10.7.0 -> 10.9.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.9.0
+npm notice To update run: npm install -g npm@10.9.0
+npm notice
+
+OpenSpace-S3-code/Web3_tutorial on  main [!?] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base 
+➜ npx hardhat run scripts/deployFundMe.js --network hardhat
+
+OpenSpace-S3-code/Web3_tutorial on  main [✘!?] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base 
+➜ npx hardhat run scripts/deployFundMe.js --network sepolia
+contract deploying
+contract has been deployed successfully, contract address is 0x38A1e0224Dc1B50De2fDe584Eac4901058aD2602
+verification skipped..
+TypeError: Cannot read properties of undefined (reading 'address')
+    at main (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/scripts/deployFundMe.js:35:69)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+OpenSpace-S3-code/Web3_tutorial on  main [✘!?] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base took 33.4s 
+➜ pnpm install --save-dev dotenv    
+
+OpenSpace-S3-code/Web3_tutorial on  main [!?] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base took 3.0s 
+➜ pnpm install --save-dev @chainlink/env-enc   
+
+OpenSpace-S3-code/Web3_tutorial on  main [!?] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base took 4.6s 
+➜ npx env-enc set-pw                                       
+Enter the password (input will be hidden): 
+*********
+
+
+OpenSpace-S3-code/Web3_tutorial on  main [!?] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base 
+➜ npx env-enc set   
+Please enter the variable name (or press ENTER to finish): 
+SEPOLIA_RPC_URL
+Please enter the variable value (input will be hidden): 
+*********************************************************************
+Would you like to set another variable? Please enter the variable name (or press ENTER to finish): 
+PRIVATE_KEY
+Please enter the variable value (input will be hidden): 
+******************************************************************
+Would you like to set another variable? Please enter the variable name (or press ENTER to finish): 
+
+OpenSpace-S3-code/Web3_tutorial on  main [!?] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base 
+➜ npx env-enc set   
+
+OpenSpace-S3-code/Web3_tutorial on  main [!?] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base took 1m 40.4s 
+➜ 
+
+OpenSpace-S3-code/Web3_tutorial on  main [!?] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base 
+➜ npx hardhat run scripts/deployFundMe.js --network sepolia
+contract deploying
+contract has been deployed successfully, contract address is 0xB8eFaa87e3F8D027fB1F848a5B2E04f59dFd3838
+Waiting for 5 confirmations
+The contract 0xB8eFaa87e3F8D027fB1F848a5B2E04f59dFd3838 has already been verified on the block explorer. If you're trying to verify a partially verified contract, please use the --force flag.
+https://sepolia.etherscan.io/address/0xB8eFaa87e3F8D027fB1F848a5B2E04f59dFd3838#code
+
+ProviderError: execution reverted: Send more ETH
+    at HttpProvider.request (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/hardhat@2.22.13_ts-node@10.9.2_@types+node@22.7.5_typescript@5.6.3__typescript@5.6.3/node_modules/hardhat/src/internal/core/providers/http.ts:107:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at HardhatEthersProvider.estimateGas (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/@nomicfoundation+hardhat-ethers@3.0.8_ethers@6.13.4_hardhat@2.22.13_ts-node@10.9.2_@types+nod_2f75xpawt3agbuz2b2qvz4znxq/node_modules/@nomicfoundation/hardhat-ethers/src/internal/hardhat-ethers-provider.ts:246:27)
+    at /Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/@nomicfoundation+hardhat-ethers@3.0.8_ethers@6.13.4_hardhat@2.22.13_ts-node@10.9.2_@types+nod_2f75xpawt3agbuz2b2qvz4znxq/node_modules/@nomicfoundation/hardhat-ethers/src/signers.ts:235:35
+    at async Promise.all (index 0)
+    at HardhatEthersSigner._sendUncheckedTransaction (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/@nomicfoundation+hardhat-ethers@3.0.8_ethers@6.13.4_hardhat@2.22.13_ts-node@10.9.2_@types+nod_2f75xpawt3agbuz2b2qvz4znxq/node_modules/@nomicfoundation/hardhat-ethers/src/signers.ts:256:7)
+    at HardhatEthersSigner.sendTransaction (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/@nomicfoundation+hardhat-ethers@3.0.8_ethers@6.13.4_hardhat@2.22.13_ts-node@10.9.2_@types+nod_2f75xpawt3agbuz2b2qvz4znxq/node_modules/@nomicfoundation/hardhat-ethers/src/signers.ts:125:18)
+    at send (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/ethers@6.13.4/node_modules/ethers/src.ts/contract/contract.ts:313:20)
+    at Proxy.fund (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/ethers@6.13.4/node_modules/ethers/src.ts/contract/contract.ts:352:16)
+    at main (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/scripts/deployFundMe.js:31:20)
+
+
+
+OpenSpace-S3-code/Web3_tutorial on  main [!?] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base took 1m 31.8s 
+➜ npx hardhat run scripts/deployFundMe.js --network sepolia
+contract deploying
+contract has been deployed successfully, contract address is 0xeFBf864f30D92f96c716E96CaD9691FCe82A3fa2
+Waiting for 5 confirmations
+The contract 0xeFBf864f30D92f96c716E96CaD9691FCe82A3fa2 has already been verified on the block explorer. If you're trying to verify a partially verified contract, please use the --force flag.
+https://sepolia.etherscan.io/address/0xeFBf864f30D92f96c716E96CaD9691FCe82A3fa2#code
+
+2 accounts are 0x750Ea21c1e98CcED0d4557196B6f4a5974CCB6f5 and 0x632d05154f4E519357e2E42c5f36AB90E3389F27
+Balance of the contract is 500000000000000000
+Balance of the contract is 1000000000000000000
+Balance of first account 0x750Ea21c1e98CcED0d4557196B6f4a5974CCB6f5 is 500000000000000000
+Balance of second account 0x632d05154f4E519357e2E42c5f36AB90E3389F27 is 500000000000000000
+
+
+npx hardhat deploy-fundme --network sepolia
+
+npx hardhat interact-fundme --addr 0xeFBf864f30D92f96c716E96CaD9691FCe82A3fa2 --network sepolia
 ```
+
+## 参考
+
+- <https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol>
+- <https://github.com/smartcontractkit/Web3_tutorial_Chinese>
+- <https://sepolia.etherscan.io/address/0x38a1e0224dc1b50de2fde584eac4901058ad2602#code>
+- <https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-verify>
+- <https://sepolia.etherscan.io/address/0xeFBf864f30D92f96c716E96CaD9691FCe82A3fa2#code>
