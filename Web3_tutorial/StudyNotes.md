@@ -259,6 +259,18 @@ npx hardhat deploy-fundme --network sepolia
 npx hardhat interact-fundme --addr 0xeFBf864f30D92f96c716E96CaD9691FCe82A3fa2 --network sepolia
 
 pnpm install -D hardhat-deploy
+
+OpenSpace-S3-code/Web3_tutorial on  main [!] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base 
+➜ npx hardhat test
+Compiled 1 Solidity file successfully (evm target: paris).
+
+
+  test fundme contract
+    ✔ test if the owner is msg.sender (424ms)
+    ✔ test if the datafeed is assigned correctly
+
+
+  2 passing (430ms)
 ```
 
 ## 参考
