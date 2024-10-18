@@ -3,13 +3,13 @@ require("@chainlink/env-enc").config()
 require("./tasks")
 require("hardhat-deploy")
 require("@nomicfoundation/hardhat-ethers");
-require("hardhat-deploy");
 // require("hardhat-deploy-ethers");
 
 const SEPOLIA_RPC_URL = process.env.SEPOLIA_RPC_URL
 const PRIVATE_KEY = process.env.PRIVATE_KEY
 const PRIVATE_KEY_1 = process.env.PRIVATE_KEY_1
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY
+
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {

@@ -280,6 +280,33 @@ WARNING: You are currently using Node.js v22.1.0, which is not supported by Hard
 Compiled 2 Solidity files successfully (evm target: paris).
 Deploying contracts with account: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
 
+OpenSpace-S3-code/Web3_tutorial on  main [⇡!] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base took 2.2s 
+➜ npx hardhat compile
+WARNING: You are currently using Node.js v22.1.0, which is not supported by Hardhat. This can lead to unexpected behavior. See https://hardhat.org/nodejs-versions
+
+
+Compiled 4 Solidity files successfully (evm target: paris).
+
+OpenSpace-S3-code/Web3_tutorial on  main [?] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base 
+➜ npx hardhat deploy --tags mock
+WARNING: You are currently using Node.js v22.1.0, which is not supported by Hardhat. This can lead to unexpected behavior. See https://hardhat.org/nodejs-versions
+
+
+Nothing to compile
+deploying "MockV3Aggregator" (tx: 0xd5c4dc43e20d4ed139ef9e3c56d3ea6446c5d55821c09cf8fdb5bdb3dd3b337f)...: deployed at 0x5FbDB2315678afecb367f032d93F642f64180aa3 with 694979 gas
+
+
+OpenSpace-S3-code/Web3_tutorial on  main [?] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base 
+➜ npx hardhat deploy            
+WARNING: You are currently using Node.js v22.1.0, which is not supported by Hardhat. This can lead to unexpected behavior. See https://hardhat.org/nodejs-versions
+
+
+Compiled 1 Solidity file successfully (evm target: paris).
+deploying "MockV3Aggregator" (tx: 0xd5c4dc43e20d4ed139ef9e3c56d3ea6446c5d55821c09cf8fdb5bdb3dd3b337f)...: deployed at 0x5FbDB2315678afecb367f032d93F642f64180aa3 with 694979 gas
+Deploying contracts with account: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+deploying "FundMe" (tx: 0xef0cd9474708d522fd481a658194aa39b6ffbac1aa0bdd0196743f07b60db0e8)...: deployed at 0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512 with 1275494 gas
+Network is not sepolia, verification skipped...
+
 ```
 
 ## 参考
