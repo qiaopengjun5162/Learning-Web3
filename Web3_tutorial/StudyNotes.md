@@ -271,6 +271,15 @@ Compiled 1 Solidity file successfully (evm target: paris).
 
 
   2 passing (430ms)
+
+  OpenSpace-S3-code/Web3_tutorial on  main [✘!?] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base took 24.3s 
+➜ npx hardhat deploy 
+WARNING: You are currently using Node.js v22.1.0, which is not supported by Hardhat. This can lead to unexpected behavior. See https://hardhat.org/nodejs-versions
+
+
+Compiled 2 Solidity files successfully (evm target: paris).
+Deploying contracts with account: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
 ```
 
 ## 参考
