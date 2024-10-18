@@ -340,6 +340,120 @@ NetworkRequestError: A network request failed. This is an error from the block e
     at Environment.run (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/hardhat@2.22.13_ts-node@10.9.2_@types+node@22.7.5_typescript@5.6.3__typescript@5.6.3/node_modules/hardhat/src/internal/core/runtime-environment.ts:184:14)
     at SimpleTaskDefinition.action (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/hardhat-deploy@0.14.0/node_modules/hardhat-deploy/src/index.ts:690:5)
 
+
+OpenSpace-S3-code/Web3_tutorial on  main [!] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base took 2.6s 
+➜ npx hardhat test --network sepolia        
+
+
+  test fundme contract
+environment is not local, mock contract deployment is skipped
+Successfully submitted source code for contract
+contracts/FundMe.sol:FundMe at 0xfa13E085482e97E457C213B7b8E3ea30497A1E02
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract FundMe on the block explorer.
+https://sepolia.etherscan.io/address/0xfa13E085482e97E457C213B7b8E3ea30497A1E02#code
+
+    ✔ fund and getFund successfully (207021ms)
+environment is not local, mock contract deployment is skipped
+The contract 0x9d91Cf3038C54Af0F4ED748B8A02ef45eB86F10B has already been verified on the block explorer. If you're trying to verify a partially verified contract, please use the --force flag.
+https://sepolia.etherscan.io/address/0x9d91Cf3038C54Af0F4ED748B8A02ef45eB86F10B#code
+
+    ✔ fund and refund successfully (198110ms)
+
+
+  2 passing (9m)
+
+·············································································································
+|  Solidity and Network Configuration                                                                       │
+························|·················|···············|·················|································
+|  Solidity: 0.8.20     ·  Optim: false   ·  Runs: 200    ·  viaIR: false   ·     Block: 30,000,000 gas     │
+························|·················|···············|·················|································
+|  Methods                                                                                                  │
+························|·················|···············|·················|················|···············
+|  Contracts / Methods  ·  Min            ·  Max          ·  Avg            ·  # calls       ·  usd (avg)   │
+························|·················|···············|·················|················|···············
+|  FundMe               ·                                                                                   │
+························|·················|···············|·················|················|···············
+|      getFund          ·              -  ·            -  ·         81,154  ·             2  ·           -  │
+························|·················|···············|·················|················|···············
+|      refund           ·              -  ·            -  ·         57,426  ·             1  ·           -  │
+························|·················|···············|·················|················|···············
+|  Deployments                            ·                                 ·  % of limit    ·              │
+························|·················|···············|·················|················|···············
+|  FundMe               ·              -  ·            -  ·      1,310,733  ·         4.4 %  ·           -  │
+························|·················|···············|·················|················|···············
+|  Key                                                                                                      │
+·············································································································
+|  ◯  Execution gas for this method does not include intrinsic gas overhead                                 │
+·············································································································
+|  △  Cost was non-zero but below the precision setting for the currency display (see options)              │
+·············································································································
+|  Toolchain:  hardhat                                                                                      │
+·············································································································
+
+
+OpenSpace-S3-code/Web3_tutorial on  main [!] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base took 9m 28.4s 
+➜ pnpm install --save-dev hardhat-gas-reporter            
+
+
+OpenSpace-S3-code/Web3_tutorial on  main [!] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base took 3.6s 
+➜ npx hardhat coverage
+
+Version
+=======
+> solidity-coverage: v0.8.13
+
+Instrumenting for coverage...
+=============================
+
+> FundMe.sol
+> mocks/MockV3Aggregator.sol
+
+Compilation:
+============
+
+Nothing to compile
+
+Network Info
+============
+> HardhatEVM: v2.22.13
+> network:    hardhat
+
+
+
+  test fundme contract
+Network is not sepolia, verification skipped...
+    ✔ test if the owner is msg.sender
+    ✔ test if the datafeed is assigned correctly
+    ✔ window closed, value grater than minimum, fund failed
+    ✔ window open, value is less than minimum, fund failed
+    ✔ Window open, value is greater minimum, fund success
+    ✔ not owner, window closed, target reached, getFund failed
+    ✔ window open, target reached, getFund failed
+    ✔ window closed, target not reached, getFund failed
+    ✔ window closed, target reached, getFund success
+    ✔ window open, target not reached, funder has balance
+    ✔ window closed, target reach, funder has balance
+    ✔ window closed, target not reach, funder does not has balance
+    ✔ window closed, target not reached, funder has balance
+
+
+  13 passing (275ms)
+
+-----------------------|----------|----------|----------|----------|----------------|
+File                   |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+-----------------------|----------|----------|----------|----------|----------------|
+ contracts/            |       95 |    73.33 |    72.73 |    88.57 |                |
+  FundMe.sol           |       95 |    73.33 |    72.73 |    88.57 | 69,114,118,122 |
+ contracts/mocks/      |      100 |      100 |      100 |      100 |                |
+  MockV3Aggregator.sol |      100 |      100 |      100 |      100 |                |
+-----------------------|----------|----------|----------|----------|----------------|
+All files              |       95 |    73.33 |    72.73 |    88.57 |                |
+-----------------------|----------|----------|----------|----------|----------------|
+
+> Istanbul reports written to ./coverage/ and ./coverage.json
+
 ```
 
 ## 参考
@@ -349,3 +463,4 @@ NetworkRequestError: A network request failed. This is an error from the block e
 - <https://sepolia.etherscan.io/address/0x38a1e0224dc1b50de2fde584eac4901058ad2602#code>
 - <https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-verify>
 - <https://sepolia.etherscan.io/address/0xeFBf864f30D92f96c716E96CaD9691FCe82A3fa2#code>
+- <https://sepolia.etherscan.io/address/0x9d91Cf3038C54Af0F4ED748B8A02ef45eB86F10B#code>
