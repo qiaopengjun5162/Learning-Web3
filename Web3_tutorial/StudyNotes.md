@@ -307,6 +307,39 @@ Deploying contracts with account: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
 deploying "FundMe" (tx: 0xef0cd9474708d522fd481a658194aa39b6ffbac1aa0bdd0196743f07b60db0e8)...: deployed at 0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512 with 1275494 gas
 Network is not sepolia, verification skipped...
 
+OpenSpace-S3-code/Web3_tutorial on  main [!] is 📦 1.0.0 via ⬢ v22.1.0 via 🅒 base 
+➜ npx hardhat deploy --network sepolia --reset
+Nothing to compile
+environment is not local, mock contract deployment is skipped
+Deploying contracts with account: 0x750Ea21c1e98CcED0d4557196B6f4a5974CCB6f5
+deploying "FundMe" (tx: 0xcfae43a9cfe765be74a5f08183a716aedcabe1ae4c5cf8049204c202f35ab61c)...: deployed at 0x667AfB9ada5ccC7b688433E91B7d46f9f7ddCBFa with 1275494 gas
+Verifying contract on Etherscan ABTUD7ZTBBSPF728USUVRAC2CZIAG1QXHI
+URL:  https://eth-sepolia.g.alchemy.com/v2/YLgbp9I-spejSR_9EHp_-UYDrIYdrwE1
+An unexpected error occurred:
+
+Error: ERROR processing /Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/deploy/01-deploy-fund-me.js:
+NetworkRequestError: A network request failed. This is an error from the block explorer, not Hardhat. Error: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+    at Etherscan.isVerified (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/@nomicfoundation+hardhat-verify@2.0.11_hardhat@2.22.13_ts-node@10.9.2_@types+node@22.7.5_type_la3yuvfdwmqcqidwgjdor4fbty/node_modules/@nomicfoundation/hardhat-verify/src/internal/etherscan.ts:111:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at SimpleTaskDefinition.action (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/@nomicfoundation+hardhat-verify@2.0.11_hardhat@2.22.13_ts-node@10.9.2_@types+node@22.7.5_type_la3yuvfdwmqcqidwgjdor4fbty/node_modules/@nomicfoundation/hardhat-verify/src/internal/tasks/etherscan.ts:108:20)
+    at Environment._runTaskDefinition (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/hardhat@2.22.13_ts-node@10.9.2_@types+node@22.7.5_typescript@5.6.3__typescript@5.6.3/node_modules/hardhat/src/internal/core/runtime-environment.ts:351:14)
+    at Environment.run (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/hardhat@2.22.13_ts-node@10.9.2_@types+node@22.7.5_typescript@5.6.3__typescript@5.6.3/node_modules/hardhat/src/internal/core/runtime-environment.ts:184:14)
+    at SimpleTaskDefinition.action (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/@nomicfoundation+hardhat-verify@2.0.11_hardhat@2.22.13_ts-node@10.9.2_@types+node@22.7.5_type_la3yuvfdwmqcqidwgjdor4fbty/node_modules/@nomicfoundation/hardhat-verify/src/index.ts:313:9)
+    at Environment._runTaskDefinition (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/hardhat@2.22.13_ts-node@10.9.2_@types+node@22.7.5_typescript@5.6.3__typescript@5.6.3/node_modules/hardhat/src/internal/core/runtime-environment.ts:351:14)
+    at Environment.run (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/hardhat@2.22.13_ts-node@10.9.2_@types+node@22.7.5_typescript@5.6.3__typescript@5.6.3/node_modules/hardhat/src/internal/core/runtime-environment.ts:184:14)
+    at Object.module.exports [as func] (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/deploy/01-deploy-fund-me.js:44:9)
+    at DeploymentsManager.executeDeployScripts (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/hardhat-deploy@0.14.0/node_modules/hardhat-deploy/src/DeploymentsManager.ts:1212:22)
+    at DeploymentsManager.executeDeployScripts (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/hardhat-deploy@0.14.0/node_modules/hardhat-deploy/src/DeploymentsManager.ts:1215:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at DeploymentsManager.runDeploy (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/hardhat-deploy@0.14.0/node_modules/hardhat-deploy/src/DeploymentsManager.ts:1061:5)
+    at SimpleTaskDefinition.action (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/hardhat-deploy@0.14.0/node_modules/hardhat-deploy/src/index.ts:450:5)
+    at Environment._runTaskDefinition (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/hardhat@2.22.13_ts-node@10.9.2_@types+node@22.7.5_typescript@5.6.3__typescript@5.6.3/node_modules/hardhat/src/internal/core/runtime-environment.ts:351:14)
+    at Environment.run (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/hardhat@2.22.13_ts-node@10.9.2_@types+node@22.7.5_typescript@5.6.3__typescript@5.6.3/node_modules/hardhat/src/internal/core/runtime-environment.ts:184:14)
+    at SimpleTaskDefinition.action (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/hardhat-deploy@0.14.0/node_modules/hardhat-deploy/src/index.ts:601:32)
+    at Environment._runTaskDefinition (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/hardhat@2.22.13_ts-node@10.9.2_@types+node@22.7.5_typescript@5.6.3__typescript@5.6.3/node_modules/hardhat/src/internal/core/runtime-environment.ts:351:14)
+    at Environment.run (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/hardhat@2.22.13_ts-node@10.9.2_@types+node@22.7.5_typescript@5.6.3__typescript@5.6.3/node_modules/hardhat/src/internal/core/runtime-environment.ts:184:14)
+    at SimpleTaskDefinition.action (/Users/qiaopengjun/Code/solidity-code/OpenSpace-S3-code/Web3_tutorial/node_modules/.pnpm/hardhat-deploy@0.14.0/node_modules/hardhat-deploy/src/index.ts:690:5)
+
 ```
 
 ## 参考

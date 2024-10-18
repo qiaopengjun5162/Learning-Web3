@@ -1,10 +1,9 @@
 // function deployFunction() {
 //     console.log("this is a deploy function")
 // }
+
 const { network } = require("hardhat")
 const { developmentChains, networkConfig, LOCK_TIME, CONFIRMATIONS } = require("../helper-hardhat-config")
-
-
 // module.exports.default=deployFunction
 // module.exports= async(hre) => {
 //     const getNamedAccounts = hre.getNamedAccounts
@@ -13,9 +12,8 @@ const { developmentChains, networkConfig, LOCK_TIME, CONFIRMATIONS } = require("
 // }
 
 module.exports = async ({ getNamedAccounts, deployments }) => {
-    const { firstAccount } = await getNamedAccounts();
-    const { deploy } = deployments;
-    console.log("Deploying contracts with account:", firstAccount);
+    const { firstAccount } = await getNamedAccounts()
+    const { deploy } = deployments
 
     let dataFeedAddr
     let confirmations
@@ -33,13 +31,10 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
         args: [LOCK_TIME, dataFeedAddr],
         log: true,
         waitConfirmations: confirmations
-    });
-
+    })
     // remove deployments directory or add --reset flag if you redeploy contract
 
     if (hre.network.config.chainId == 11155111 && process.env.ETHERSCAN_API_KEY) {
-        console.log("Verifying contract on Etherscan", process.env.ETHERSCAN_API_KEY);
-        console.log("URL: ", process.env.SEPOLIA_RPC_URL);
         await hre.run("verify:verify", {
             address: fundMe.address,
             constructorArguments: [LOCK_TIME, dataFeedAddr],
@@ -47,6 +42,8 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     } else {
         console.log("Network is not sepolia, verification skipped...")
     }
-};
+
+
+}
 
 module.exports.tags = ["all", "fundme"]
