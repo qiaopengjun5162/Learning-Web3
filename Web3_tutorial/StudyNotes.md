@@ -257,6 +257,8 @@ Balance of second account 0x632d05154f4E519357e2E42c5f36AB90E3389F27 is 50000000
 npx hardhat deploy-fundme --network sepolia
 
 npx hardhat interact-fundme --addr 0xeFBf864f30D92f96c716E96CaD9691FCe82A3fa2 --network sepolia
+
+pnpm install -D hardhat-deploy
 ```
 
 ## 参考
