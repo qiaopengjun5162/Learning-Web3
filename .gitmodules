@@ -64,3 +64,6 @@
 [submodule "RWA-2024-bootcamp/lib/forge-std"]
 	path = RWA-2024-bootcamp/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "security-course/basic-solc-project/lib/forge-std"]
+	path = security-course/basic-solc-project/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
